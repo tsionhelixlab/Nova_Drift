@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Astroquest Hub - Junior Astronaut Mission Trainer">
+
+    <title>Astroquest Hub | Junior Astronaut Mission Trainer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🚀</div>
+
+            <div>
+                <h2>Astroquest</h2>
+                <span>HUB</span>
+            </div>
+        </div>
+
+
+        <nav>
+
+            <button class="nav-item active"
+                    data-page="dashboard">
+                🏠
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="training">
+                🎓
+                <span>Training</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="missions">
+                🚀
+                <span>Missions</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="achievements">
+                🏆
+                <span>Achievements</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="profile">
+                👨‍🚀
+                <span>My Astronaut</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="settings">
+                ⚙️
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="mission-status">
+                <span class="online-dot"></span>
+
+                Mission Systems Online
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button class="mobile-menu"
+                    id="mobileMenu">
+                ☰
+            </button>
+
+
+            <div>
+                <h1 id="pageTitle">
+                    Mission Dashboard
+                </h1>
+
+                <p id="pageSubtitle">
+                    Prepare for your next space mission.
+                </p>
+            </div>
+
+
+            <div class="top-actions">
+
+                <button id="themeButton"
+                        class="icon-button">
+                    🌙
+                </button>
+
+                <div class="avatar">
+                    👨‍🚀
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="page active-page"
+                 id="dashboard">
+
+
+            <!-- HERO -->
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="mission-badge">
+                        NASA JUNIOR ASTRONAUT PROGRAM
+                    </span>
+
+
+                    <h2>
+                        Welcome aboard,
+                        <span>Astronaut!</span>
+                    </h2>
+
+
+                    <p>
+                        Train your skills, complete space missions,
+                        make critical decisions, and become ready
+                        for the next generation of exploration.
+                    </p>
+
+
+                    <button class="primary-button"
+                            onclick="showPage('missions')">
+
+                        🚀 Continue Mission
+
+                    </button>
+
+                </div>
+
+
+                <div class="planet">
+
+                    <div class="planet-ring"></div>
+
+                    🌕
+                    
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ⭐
+                    </div>
+
+                    <div>
+                        <span>Mission XP</span>
+                        <strong id="xp">2480</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        🚀
+                    </div>
+
+                    <div>
+                        <span>Missions</span>
+                        <strong>8</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        🎯
+                    </div>
+
+                    <div>
+                        <span>Accuracy</span>
+                        <strong>92%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        🏆
+                    </div>
+
+                    <div>
+                        <span>Rank</span>
+                        <strong>Explorer</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVE MISSION -->
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Active Mission</h2>
+
+                    <p>
+                        Your current training mission
+                    </p>
+                </div>
+
+                <button class="secondary-button"
+                        onclick="showPage('missions')">
+
+                    View Missions
+
+                </button>
+
+            </div>
+
+
+            <div class="mission-card">
+
+                <div class="mission-image">
+                    🌑
+                </div>
+
+
+                <div class="mission-info">
+
+                    <span class="mission-level">
+                        BEGINNER
+                    </span>
+
+
+                    <h3>
+                        Lunar Frontier
+                    </h3>
+
+
+                    <p>
+                        Navigate a lunar landing mission,
+                        manage spacecraft systems, and
+                        make real-time decisions.
+                    </p>
+
+
+                    <div class="progress-container">
+
+                        <div class="progress-label">
+
+                            <span>Mission Progress</span>
+
+                            <strong>72%</strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div style="width:72%"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="primary-button"
+                            onclick="startMission()">
+
+                        Continue Mission →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= TRAINING ================= -->
+
+        <section class="page"
+                 id="training">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Training Center</h2>
+
+                    <p>
+                        Build the skills required for space exploration.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="training-grid">
+
+
+                <div class="training-card">
+
+                    <div class="training-icon">
+                        🧭
+                    </div>
+
+                    <h3>Navigation</h3>
+
+                    <p>
+                        Learn spacecraft navigation
+                        and orbital basics.
+                    </p>
+
+                    <div class="training-progress">
+                        <span>80%</span>
+
+                        <div>
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <button class="secondary-button">
+                        Continue
+                    </button>
+
+                </div>
+
+
+                <div class="training-card">
+
+                    <div class="training-icon">
+                        🌙
+                    </div>
+
+                    <h3>Lunar Science</h3>
+
+                    <p>
+                        Discover the Moon's surface,
+                        geology and environment.
+                    </p>
+
+                    <div class="training-progress">
+                        <span>65%</span>
+
+                        <div>
+                            <div style="width:65%"></div>
+                        </div>
+                    </div>
+
+                    <button class="secondary-button">
+                        Continue
+                    </button>
+
+                </div>
+
+
+                <div class="training-card">
+
+                    <div class="training-icon">
+                        🛰️
+                    </div>
+
+                    <h3>Spacecraft Systems</h3>
+
+                    <p>
+                        Understand spacecraft systems
+                        and emergency procedures.
+                    </p>
+
+                    <div class="training-progress">
+                        <span>45%</span>
+
+                        <div>
+                            <div style="width:45%"></div>
+                        </div>
+                    </div>
+
+                    <button class="secondary-button">
+                        Continue
+                    </button>
+
+                </div>
+
+
+                <div class="training-card">
+
+                    <div class="training-icon">
+                        🧠
+                    </div>
+
+                    <h3>Mission Decisions</h3>
+
+                    <p>
+                        Practice making decisions
+                        during unexpected situations.
+                    </p>
+
+                    <div class="training-progress">
+                        <span>90%</span>
+
+                        <div>
+                            <div style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <button class="secondary-button">
+                        Continue
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MISSIONS ================= -->
+
+        <section class="page"
+                 id="missions">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Mission Center</h2>
+
+                    <p>
+                        Choose your next space adventure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="mission-grid" id="missionGrid">
+
+
+                <div class="mission-option featured">
+
+                    <div class="mission-cover moon">
+                        🌕
+                    </div>
+
+                    <div class="mission-option-content">
+
+                        <span>BEGINNER</span>
+
+                        <h3>Lunar Frontier</h3>
+
+                        <p>
+                            Complete a simulated lunar
+                            landing and manage spacecraft
+                            systems.
+                        </p>
+
+                        <div class="mission-meta">
+
+                            <span>⏱ 12 min</span>
+                            <span>⭐ +500 XP</span>
+
+                        </div>
+
+                        <button class="primary-button"
+                                onclick="startMission()">
+
+                            Start Mission
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mission-option">
+
+                    <div class="mission-cover mars">
+                        🔴
+                    </div>
+
+                    <div class="mission-option-content">
+
+                        <span>INTERMEDIATE</span>
+
+                        <h3>Mars Relay</h3>
+
+                        <p>
+                            Restore communication between
+                            Earth and a Mars research station.
+                        </p>
+
+                        <div class="mission-meta">
+
+                            <span>⏱ 18 min</span>
+                            <span>⭐ +800 XP</span>
+
+                        </div>
+
+                        <button class="secondary-button">
+
+                            Locked 🔒
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mission-option">
+
+                    <div class="mission-cover orbit">
+                        🛰️
+                    </div>
+
+                    <div class="mission-option-content">
+
+                        <span>INTERMEDIATE</span>
+
+                        <h3>Orbital Laboratory</h3>
+
+                        <p>
+                            Operate a research laboratory
+                            orbiting Earth.
+                        </p>
+
+                        <div class="mission-meta">
+
+                            <span>⏱ 15 min</span>
+                            <span>⭐ +650 XP</span>
+
+                        </div>
+
+                        <button class="secondary-button">
+
+                            Locked 🔒
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MISSION CONTROL ================= -->
+
+        <section class="page"
+                 id="mission-control">
+
+            <div class="mission-control">
+
+                <div class="mission-header">
+
+                    <div>
+
+                        <span class="mission-badge">
+                            LIVE SIMULATION
+                        </span>
+<h2 id="activeMissionTitle">Orientation Mission</h2>
+
+                    </div>
+
+                    <span class="signal">
+                        ● SIGNAL ONLINE
+                    </span>
+
+                </div>
+
+
+                <div class="telemetry">
+
+                    <div>
+                        <span>ALTITUDE</span>
+                        <strong id="altitude">
+                            12.4 km
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>FUEL</span>
+                        <strong id="fuel">
+                            68%
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>CREW</span>
+                        <strong>3</strong>
+                    </div>
+
+                    <div>
+                        <span>SIGNAL</span>
+                        <strong>98%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="lunar-scene">
+
+                    <div class="spacecraft">
+                        🚀
+                    </div>
+
+                    <div class="moon-surface">
+                        🌑
+                    </div>
+
+                </div>
+
+<div class="decision-panel">
+
+    <span class="decision-label">
+        MISSION OBJECTIVES
+    </span>
+
+    <h3 id="missionPrompt">
+        Prepare your spacecraft
+    </h3>
+
+    <p id="missionDescription">
+        Complete each preparation objective.
+    </p>
+
+    <div id="missionObjectives" class="mission-objectives"></div>
+
+    <div id="missionResources" class="mission-resources"></div>
+
+    <div class="decision-options" id="missionActions"></div>
+
+    <p id="missionFeedback" aria-live="polite"></p>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACHIEVEMENTS ================= -->
+
+        <section class="page"
+                 id="achievements">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Achievements</h2>
+
+                    <p>
+                        Milestones earned during your astronaut journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-grid">
+
+
+                <div class="achievement unlocked">
+
+                    <div>🚀</div>
+
+                    <h3>First Launch</h3>
+
+                    <p>
+                        Complete your first mission.
+                    </p>
+
+                    <span>UNLOCKED</span>
+
+                </div>
+
+
+                <div class="achievement unlocked">
+
+                    <div>🌙</div>
+
+                    <h3>Lunar Explorer</h3>
+
+                    <p>
+                        Complete Lunar Frontier.
+                    </p>
+
+                    <span>UNLOCKED</span>
+
+                </div>
+
+
+                <div class="achievement unlocked">
+
+                    <div>🎯</div>
+
+                    <h3>Sharp Decision</h3>
+
+                    <p>
+                        Make 5 successful mission decisions.
+                    </p>
+
+                    <span>UNLOCKED</span>
+
+                </div>
+
+
+                <div class="achievement locked">
+
+                    <div>🔴</div>
+
+                    <h3>Mars Pioneer</h3>
+
+                    <p>
+                        Complete Mars Relay.
+                    </p>
+
+                    <span>LOCKED</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFILE ================= -->
+
+        <section class="page"
+                 id="profile">
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    👨‍🚀
+                </div>
+
+                <h2>Junior Astronaut</h2>
+
+                <p>
+                    Lunar Mission Explorer
+                </p>
+
+
+                <div class="level">
+
+                    <span>
+                        Explorer Level 8
+                    </span>
+
+                    <strong>
+                        2480 / 3000 XP
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div style="width:82%"></div>
+
+                </div>
+
+
+                <h3 class="skills-title">
+                    Astronaut Skills
+                </h3>
+
+
+                <div class="skills">
+
+                    <div>
+                        <span>Navigation</span>
+                        <strong>80%</strong>
+                    </div>
+
+                    <div>
+                        <span>Problem Solving</span>
+                        <strong>92%</strong>
+                    </div>
+
+                    <div>
+                        <span>Science</span>
+                        <strong>75%</strong>
+                    </div>
+
+                    <div>
+                        <span>Decision Making</span>
+                        <strong>88%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SETTINGS ================= -->
+
+        <section class="page"
+                 id="settings">
+
+            <div class="settings-card">
+
+                <h2>Settings</h2>
+
+                <p>
+                    Customize your Astroquest Hub experience.
+                </p>
+
+
+                <div class="setting">
+
+                    <div>
+
+                        <h3>Dark Space Theme</h3>
+
+                        <span>
+                            Use the space-themed dark interface.
+                        </span>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input type="checkbox"
+                               id="darkModeToggle"
+                               checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting">
+
+                    <div>
+
+                        <h3>Mission Alerts</h3>
+
+                        <span>
+                            Receive important mission notifications.
+                        </span>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input type="checkbox"
+                               checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting">
+
+                    <div>
+
+                        <h3>Training Assistance</h3>
+
+                        <span>
+                            Show helpful hints during missions.
+                        </span>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input type="checkbox"
+                               checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script type="module" src="/src/frontend/main.ts"></script>
+
+</body>
+</html>
