@@ -8,8 +8,6 @@ This repository contains the **State Management & Scoring module** of Nova Drift
 
 Its responsibility is to manage the player's game state, track mission progress, calculate and store mission results, manage achievements, and preserve important data between sessions.
 
-## My Responsibilities
-
 This module provides:
 
 - TypeScript interfaces for shared game data.
@@ -108,10 +106,3 @@ Run TypeScript checks:
 npm run typecheck
 ```
 
-## Integration Status
-
-This module is being prepared for integration with the other Nova Drift modules.
-
-Its shared interfaces and integration expectations are documented in `INTEGRATION.md`.
-
-Some integration details, including mission event contracts and achievement unlock responsibilities, still require team agreement.
