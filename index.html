@@ -10,6 +10,7 @@
     <title>Astroquest Hub | Junior Astronaut Mission Trainer</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lab-interior.css">
 </head>
 
 <body>
@@ -46,6 +47,18 @@
                     data-page="missions">
                 🚀
                 <span>Missions</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="lab">
+                🧪
+                <span>Scientific Lab</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="science-log">
+                📓
+                <span>Science Log</span>
             </button>
 
             <button class="nav-item"
@@ -200,7 +213,7 @@
 
                     <div>
                         <span>Missions</span>
-                        <strong>8</strong>
+                        <strong>6</strong>
                     </div>
 
                 </div>
@@ -328,7 +341,7 @@
 
                 <div>
 
-                    <h2>Training Center</h2>
+                    <h2>Training Center(Coming soon)</h2>
 
                     <p>
                         Build the skills required for space exploration.
@@ -592,6 +605,77 @@
 
         </section>
 
+
+        <!-- ================= SCIENTIFIC LAB ================= -->
+        <section class="page research-lab" id="lab">
+            <div class="section-header lab-page-heading">
+                <div>
+                    <span class="lab-eyebrow">HABITAT RESEARCH MODULE / SECTOR 04</span>
+                    <h2>Scientific Research Laboratory</h2>
+                    <p>A crew-rated, modular orbital laboratory for materials science, plant research and microgravity experiments.</p>
+                </div>
+                <div class="lab-status"><i></i> ENVIRONMENT NOMINAL</div>
+            </div>
+
+            <div class="lab-facility-strip" aria-label="Laboratory facility information">
+                <div><span>FACILITY</span><strong>NRL-04 · ORBITAL RESEARCH BAY</strong></div>
+                <div><span>PRESSURE</span><strong>101.3 kPa <small>SIMULATED</small></strong></div>
+                <div><span>ATMOSPHERE</span><strong>O₂ / N₂ CONTROLLED</strong></div>
+                <div><span>POWER BUS</span><strong>120 V DC <small>SIMULATED</small></strong></div>
+            </div>
+
+            <div class="lab-room" aria-label="Illustrated interior of the orbital research laboratory">
+                <div class="lab-room-ceiling"><span>DIFFUSE TASK LIGHTING</span><span>RETURN AIR GRILLE</span><span>STRUCTURAL RAIL</span></div>
+                <div class="lab-room-wall">
+                    <div class="lab-window"><div class="lab-window-earth"></div><span>OBSERVATION PORT / EARTH LIMB</span></div>
+                    <div class="lab-wall-cabinet"><b>ENVIRONMENTAL CONTROL</b><div class="cabinet-display"><i></i><i></i><i></i><i></i></div><small>CO₂ SCRUBBER · TRACE GAS · HUMIDITY</small></div>
+                    <div class="lab-wall-rack"><b>INSTRUMENT RACK</b><div class="rack-units"><i></i><i></i><i></i></div><small>DATA / POWER / THERMAL</small></div>
+                </div>
+                <div class="lab-room-benches">
+                    <div class="lab-bench bench-left"><div class="bench-equipment microscope"><i></i><b></b><span></span></div><div class="bench-label">OPTICAL ANALYSIS</div></div>
+                    <div class="lab-bench bench-center"><div class="bench-equipment glovebox"><i></i><b></b><span></span></div><div class="bench-label">SEALED SAMPLE WORKSTATION</div></div>
+                    <div class="lab-bench bench-right"><div class="bench-equipment growth-cabinet"><i></i><b></b><span></span></div><div class="bench-label">PLANT GROWTH CHAMBER</div></div>
+                </div>
+                <div class="lab-room-floor"><span>ANTI-SLIP FLOOR PANELS · RESTRAINT POINTS · CABLE ROUTING</span></div>
+                <div class="lab-room-caption"><b>RESEARCH BAY 04</b><span>Modular workstations · restraint-ready equipment · closed-loop environmental control</span></div>
+            </div>
+
+            <div class="lab-console-row">
+                <div class="lab-console-title"><span>ACTIVE RESEARCH STATIONS</span><small>Select a station to begin a guided investigation</small></div>
+                <div class="lab-console-metrics"><span id="labResearchPoints">Research points earned: 0</span><span class="lab-divider"></span><span>3 EXPERIMENT MODULES</span></div>
+            </div>
+            <p class="lab-feedback-panel" id="labFeedback" aria-live="polite">Choose a station and make a prediction to begin.</p>
+            <div class="training-grid lab-station-grid" id="labExperiments"></div>
+            <p class="lab-disclaimer">TRAINING ENVIRONMENT · All telemetry, pressures, and experimental outcomes shown here are simplified educational simulations, not operational spacecraft data.</p>
+        </section>
+
+        <!-- ================= SCIENCE LOG ================= -->
+        <section class="page" id="science-log">
+            <div class="section-header">
+                <div>
+                    <h2>Scientific Log</h2>
+                    <p>Your mission discoveries, experiment results, observations, and research notes.</p>
+                </div>
+            </div>
+            <form id="scienceNoteForm" class="settings-card">
+                <h3>Add a research note</h3>
+                <label for="scienceNoteTitle">Title</label>
+                <input id="scienceNoteTitle" type="text" maxlength="90" required>
+                <label for="scienceNoteContent">Observation or conclusion</label>
+                <textarea id="scienceNoteContent" rows="3" maxlength="800" required></textarea>
+                <label for="scienceNoteSource">Source or reference (optional)</label>
+                <input id="scienceNoteSource" type="text" maxlength="300" placeholder="Paste a source title or URL">
+                <label for="scienceNoteEvidence">Evidence classification</label>
+                <select id="scienceNoteEvidence">
+                    <option>DIRECT DATA</option>
+                    <option>SOURCED FACT</option>
+                    <option>DERIVED MODEL</option>
+                    <option>GAMEPLAY ASSUMPTION</option>
+                </select>
+                <button class="primary-button" type="submit">Save research note</button>
+            </form>
+            <div class="training-grid" id="scienceLogEntries"></div>
+        </section>
 
         <!-- ================= MISSION CONTROL ================= -->
 
